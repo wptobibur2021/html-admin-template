@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Responsive CSS Declaration below -->
+    <link href="./css/responsive.css" rel="stylesheet" />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-sidebar-container">
+        <div class="left-sidebar">
+          <!-- Logo -->
+          <div class="logo-area">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <div class="left-sidebar-menu">
+            <ul class="left-menu">
+              <li class="active"><i class="fa fa-th-large"></i>Dashboard</li>
+              <li><i class="fa fa-desktop"></i>Laptop</li>
+              <li><i class="fa fa-file-text"></i>Files</li>
+              <li><i class="fa fa-file"></i>Logs</li>
+              <li><i class="fa fa-bug"></i>Buy Credits</li>
+              <li><i class="fa fa-life-ring"></i>Integrations</li>
+              <li><i class="fa fa-users"></i>My Profile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right-sidebar-container">
+        <div class="right-sidebar-user-info">
+          <div onclick="openMenu()" class="mobile-menu-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="left-sidebar-mobile-menu" id="mobileMenuOpen">
+            <div class="menuCloseBtn">
+              <a
+                href="javascript:void(0)"
+                id="closeBtn"
+                class="closebtn"
+                onclick="closeMenu()"
+                >&times;</a
+              >
+            </div>
+            <ul class="left-mobile-menu">
+              <li><i class="fa fa-th-large"></i>Dashboard</li>
+              <li><i class="fa fa-desktop"></i>Laptop</li>
+              <li><i class="fa fa-file-text"></i>Files</li>
+              <li><i class="fa fa-file"></i>Logs</li>
+              <li><i class="fa fa-bug"></i>Buy Credits</li>
+              <li><i class="fa fa-life-ring"></i>Integrations</li>
+              <li><i class="fa fa-users"></i>My Profile</li>
+            </ul>
+          </div>
+          <div class="mobile-logo-area">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <div class="user-info-area">
+            <div class="user-blance">
+              <p>Balance :</p>
+              <h4>$125</h4>
+            </div>
+            <div onclick="myFunction()" class="user-profile-menu dropdown">
+              <div class="user-menu">
+                <img onmouseover="myFunction()" src="./img/user.png" alt="user name" />
+                <h4>Alexa Jui</h4>
+                <i class="fa fa-arrow-down"></i>
+              </div>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+              <div class="dropDownMenu">
+                <a href="#">My Profile</a>
+                <a href="#">Add Fund</a>
+                <a href="#">API Documentation</a>
+                <a href="#">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-sidebar-content">
+          <div class="right-sidebar-content-top">
+            <div class="user-profile-info">
+              <img src="./img/user.png" alt="" />
+              <h4>Alexa Jui</h4>
+              <p>alexajui@gmail.com</p>
+              <p>+1 354 785 4125</p>
+              <p>3213 D Street, Columbus, USA</p>
+            </div>
+
+            <div class="user-credit-card-info">
+              <h2>Your Credit Cards</h2>
+              <div class="user-single-card-area">
+                <div class="user-single-cards">
+                  <div class="card-info">
+                    <h4>Credit Card 1</h4>
+                    <h4>xxxxxxxxxxxx4684</h4>
+                  </div>
+                  <div class="remove-card">
+                    <i class="fa fa-trash"></i>
+                  </div>
+                </div>
+                <div class="user-single-cards">
+                  <div class="card-info">
+                    <h4>Credit Card 2</h4>
+                    <h4>xxxxxxxxxxxx4684</h4>
+                  </div>
+                  <div class="remove-card">
+                    <i class="fa fa-trash"></i>
+                  </div>
+                </div>
+                <div class="user-single-cards">
+                  <div class="card-info">
+                    <h4>Credit Card 3</h4>
+                    <h4>xxxxxxxxxxxx4684</h4>
+                  </div>
+                  <div class="remove-card">
+                    <i class="fa fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user-information-tabs-area">
+            <div class="tabs-menu-section-area">
+              <ul class="tabs-menu">
+                <li class="tablinks" onclick="openTab(event, 'updateProfile')">Update Profile</li>
+                <li class="tablinks" onclick="openTab(event, 'changePassword')">Change Password</li>
+                <li>Email Notifications</li>
+                <li>Auto Recharge Settings</li>
+              </ul>
+            </div>
+            <div class="tabs-content-area">
+              <div id="updateProfile" class="update-profile-area">
+                <div class="notifications-setting">
+                  <div class="single-setting">
+                    <label class="switch">
+                      <input type="checkbox" checked />
+                      <span class="slider round"></span>
+                    </label>
+                    <p>Notify me when list verification completes</p>
+                  </div>
+                  <div class="single-setting">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                    <p>Notify me when list verification completes</p>
+                  </div>
+                  <div class="single-setting">
+                    <label class="switch">
+                      <input type="checkbox" checked />
+                      <span class="slider round"></span>
+                    </label>
+                    <p>
+                      Notify me when list verification result is about to expire
+                    </p>
+                  </div>
+                </div>
+                <div class="email-notification3-setting">
+                  <div class="email-notification">
+                    <div class="single-setting">
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <p>Receive Low Credits Email</p>
+                    </div>
+                    <div class="email-input-field">
+                      <form>
+                        <div class="email-form-controll">
+                          <div class="single-form">
+                            <label>Send Email to <span>*</span></label>
+                            <input
+                              type="email"
+                              placeholder="wdtobibur96@gmail.com"
+                              alt=""
+                              class="form-controll"
+                            />
+                          </div>
+                          <div class="single-form">
+                            <label
+                              >When credits are less than <span>*</span></label
+                            >
+                            <input
+                              type="text"
+                              placeholder="50"
+                              class="form-controll"
+                            />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <button class="buttonSave">Save Change</button>
+                </div>
+              </div>
+              <div id="changePassword" class="change-password">
+                <div class="email-input-field">
+                  <form>
+                    <div class="email-form-controll">
+                      <div class="single-form">
+                        <label>Current password <span>*</span></label>
+                        <input
+                          type="email"
+                          placeholder="wdtobibur96@gmail.com"
+                          alt=""
+                          class="form-controll"
+                        />
+                      </div>
+                      <div class="single-form">
+                        <label>New Password <span>*</span></label>
+                        <input
+                          type="text"
+                          placeholder="50"
+                          class="form-controll"
+                        />
+                      </div>
+                    </div>
+                    <button class="buttonSave">Save Change</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* MObile left side menu open */
+      const openMenu = () => {
+        document.getElementById("mobileMenuOpen").style.width = "100%";
+      };
+      /* Mobile left side menu close */
+      const closeMenu = () => {
+        document.getElementById("mobileMenuOpen").style.width = "0%";
+      };
+      /* Dropdown menu open */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".user-profile-menu")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+
+      /* Tap function */
+      function openTab(evt, tapName) {
+        console.log("Hello")
+        /*
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        */
+
+        document.getElementById('updateProfile').style.display="none";
+        document.getElementById('changePassword').style.display="none";
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" tapActive", "");
+        }
+        evt.currentTarget.className += " tapActive";
+        document.getElementById(tapName).style.display="block"; 
+
+        /*
+        document.getElementById(tapName).style.display = "block";
+        evt.currentTarget.className += " active";
+        */
+      }
+      </script>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+/* On screens that are 600px or less, set the background color to olive */
+@media only screen and (max-width: 600px) {
+  .right-sidebar-container {
+    grid-column: span 12;
+  }
+  .mobile-logo-area img {
+    width: 70px;
+  }
+  .mobile-menu-icon {
+    display: block;
+    color: #fff;
+  }
+  .mobile-logo-area {
+    display: block;
+  }
+  .user-menu img {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+  }
+  .user-menu h4,
+  .user-menu i {
+    display: none;
+  }
+  .user-profile-menu {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    width: 0px;
+    z-index: 0;
+  }
+  .right-sidebar-user-info {
+    background-color: #000;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .user-blance {
+    display: none;
+  }
+  .left-sidebar-container {
+    display: none;
+  }
+  .user-profile-info {
+    grid-column: span 12;
+    margin-bottom: 25px;
+  }
+  .user-credit-card-info {
+    grid-column: span 12;
+    padding: 25px;
+  }
+  .user-single-card-area,
+  .right-sidebar-content-top {
+    column-gap: 0px;
+  }
+  .user-single-cards {
+    padding: 20px;
+    grid-column: span 12;
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .slider:after {
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2px;
+  }
+  .slider:before {
+    height: 15px;
+    width: 15px;
+    left: 0px;
+    bottom: 3px;
+  }
+  .switch {
+    width: 50px;
+    height: 22px;
+    margin-right: 15px;
+  }
+  .single-setting {
+    margin-bottom: 15px;
+  }
+  ul.tabs-menu li {
+    margin: 0px 10px;
+    font-size: 10px;
+  }
+  ul.tabs-menu {
+    padding-bottom: 10px;
+  }
+  .tabs-menu-section-area {
+    padding: 15px 0px;
+  }
+  .single-setting p {
+    font-size: 12px;
+  }
+  .tabs-content-area {
+    padding: 0px 15px;
+  }
+  .email-input-field {
+    padding: 0px;
+  }
+  .email-form-controll {
+    column-gap: 0px;
+  }
+  .single-form {
+    grid-column: span 12;
+  }
+  .single-form label {
+    margin-bottom: 10px;
+  }
+  input.form-controll {
+    margin-bottom: 15px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .right-sidebar-user-info {
+    padding: 20px 25px;
+  }
+  .dropdown-content {
+    min-width: 176px;
+    top: 10%;
+    right: 27px;
+  }
+  .right-sidebar-container {
+    grid-column: span 8;
+  }
+  .left-sidebar-container {
+    grid-column: span 4;
+  }
+  .user-blance h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .user-blance p {
+    font-size: 16px;
+  }
+  .user-profile-info {
+    grid-column: span 12;
+    margin-bottom: 25px;
+  }
+  .user-credit-card-info {
+    grid-column: span 12;
+    padding: 25px;
+  }
+  .user-single-card-area {
+    column-gap: 0px;
+  }
+  .user-single-cards {
+    grid-column: span 12;
+    margin-bottom: 25px;
+  }
+  ul.tabs-menu li {
+    margin: 0px 10px;
+    font-size: 14px;
+  }
+  ul.tabs-menu {
+    padding-bottom: 10px;
+  }
+  .tabs-menu-section-area {
+    padding: 15px 0px;
+  }
+  .single-setting p {
+    font-size: 12px;
+  }
+  .tabs-content-area {
+    padding: 0px 15px;
+  }
+  .email-input-field {
+    padding: 0px;
+  }
+  .email-form-controll {
+    column-gap: 0px;
+  }
+  .single-form {
+    grid-column: span 12;
+  }
+  .single-form label {
+    margin-bottom: 10px;
+  }
+  input.form-controll {
+    margin-bottom: 15px;
+  }
+}
