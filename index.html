@@ -4,25 +4,29 @@
     <title>Admin Dashboard</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font awesome icon -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <!-- Main CSS declaration below -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Responsive CSS Declaration below -->
+    <!-- Responsive CSS declaration below -->
     <link href="./css/responsive.css" rel="stylesheet" />
-    <style>
-
-    </style>
   </head>
   <body>
+    <!-- Main container start -->
     <div class="main-container">
+      <!-- Left sidebar container start -->
       <div class="left-sidebar-container">
+        <!-- Left sidebar start-->
         <div class="left-sidebar">
-          <!-- Logo -->
+          <!-- Logo start -->
           <div class="logo-area">
             <img src="./img/logo.png" alt="" />
           </div>
+          <!-- Logo end -->
+          <!-- Left sidebar menu start -->
           <div class="left-sidebar-menu">
             <ul class="left-menu">
               <li class="active"><i class="fa fa-th-large"></i>Dashboard</li>
@@ -34,13 +38,21 @@
               <li><i class="fa fa-users"></i>My Profile</li>
             </ul>
           </div>
+          <!-- Left sidebar menu end -->
         </div>
+        <!-- Left sidebar end -->
       </div>
+      <!-- Left sidebar container end -->
+      <!-- Right sidebar container start -->
       <div class="right-sidebar-container">
+        <!-- Right sidebar user info start -->
         <div class="right-sidebar-user-info">
+          <!-- Mobile menu icon start -->
           <div onclick="openMenu()" class="mobile-menu-icon">
             <i class="fa fa-bars" aria-hidden="true"></i>
           </div>
+          <!-- Mobile menu icon end -->
+          <!-- Left sidebar mobile menu start -->
           <div class="left-sidebar-mobile-menu" id="mobileMenuOpen">
             <div class="menuCloseBtn">
               <a
@@ -61,22 +73,29 @@
               <li><i class="fa fa-users"></i>My Profile</li>
             </ul>
           </div>
+          <!-- Left sidebar mobile menu end -->
+          <!-- Mobile menu logo start -->
           <div class="mobile-logo-area">
             <img src="./img/logo.png" alt="" />
           </div>
+          <!-- Mobile menu logo end -->
+          <!-- User info start  -->
           <div class="user-info-area">
+            <!-- User blance -->
             <div class="user-blance">
               <p>Balance :</p>
               <h4>$125</h4>
             </div>
-            <div onclick="myFunction()" class="user-profile-menu dropdown">
+            <!-- User profile menu -->
+            <div onclick="dropDownMenuOpen()" class="user-profile-menu dropdown">
               <div class="user-menu">
                 <img src="./img/user.png" alt="user name" />
                 <h4>Alexa Jui</h4>
                 <i class="fa fa-arrow-down"></i>
               </div>
             </div>
-            <div id="myDropdown" class="dropdown-content">
+            <!-- Dropdown menu -->
+            <div id="dropDownOpenId" class="dropdown-content">
               <div class="dropDownMenu">
                 <a href="#">My Profile</a>
                 <a href="#">Add Fund</a>
@@ -85,8 +104,11 @@
               </div>
             </div>
           </div>
+          <!-- User info end  -->
         </div>
+        <!-- Right sidebar user info end -->
         <div class="right-sidebar-content">
+          <!-- Right sidebar content top end -->
           <div class="right-sidebar-content-top">
             <div class="user-profile-info">
               <img src="./img/user.png" alt="" />
@@ -129,7 +151,10 @@
               </div>
             </div>
           </div>
+          <!-- Right sidebar content top end -->
+          <!-- User information tabs start -->
           <div class="user-information-tabs-area">
+            <!-- Tabs menu section start -->
             <div class="tabs-menu-section-area">
               <ul class="tabs-menu">
                 <li class="tablinks" onclick="openTab(event, 'updateProfile')">Update Profile</li>
@@ -138,7 +163,10 @@
                 <li>Auto Recharge Settings</li>
               </ul>
             </div>
+            <!-- Tabs menu section end -->
+            <!-- Tabs content start -->
             <div class="tabs-content-area">
+              <!-- Update profile tabs content start -->
               <div id="updateProfile" class="update-profile-area">
                 <div class="notifications-setting">
                   <div class="single-setting">
@@ -203,7 +231,10 @@
                   <button class="buttonSave">Save Change</button>
                 </div>
               </div>
+              <!-- Update profile tabs content end -->
+              <!-- Change password tabs content start -->
               <div id="changePassword" class="change-password">
+                <!-- Email input field start -->
                 <div class="email-input-field">
                   <form>
                     <div class="email-form-controll">
@@ -228,12 +259,18 @@
                     <button class="buttonSave">Save Change</button>
                   </form>
                 </div>
+                <!-- Email input field end -->
               </div>
+               <!-- Change password tabs content end -->
             </div>
+            <!-- Tabs content end -->
           </div>
+          <!-- User information tabs end -->
         </div>
       </div>
+      <!-- Right sidebar container end -->
     </div>
+     <!-- Main container end -->
     <script>
       /* MObile left side menu open */
       const openMenu = () => {
@@ -244,10 +281,9 @@
         document.getElementById("mobileMenuOpen").style.width = "0%";
       };
       /* Dropdown menu open */
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
+      function dropDownMenuOpen() {
+        document.getElementById("dropDownOpenId").classList.toggle("show");
       }
-
       // Close the dropdown if the user clicks outside of it
       window.onclick = function (event) {
         if (!event.target.matches(".user-profile-menu")) {
@@ -261,23 +297,8 @@
           }
         }
       };
-
       /* Tap function */
       function openTab(evt, tapName) {
-        console.log("Hello")
-        /*
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        */
-
         document.getElementById('updateProfile').style.display="none";
         document.getElementById('changePassword').style.display="none";
         tablinks = document.getElementsByClassName("tablinks");
@@ -285,12 +306,7 @@
           tablinks[i].className = tablinks[i].className.replace(" tapActive", "");
         }
         evt.currentTarget.className += " tapActive";
-        document.getElementById(tapName).style.display="block"; 
-
-        /*
-        document.getElementById(tapName).style.display = "block";
-        evt.currentTarget.className += " active";
-        */
+        document.getElementById(tapName).style.display="block";
       }
       </script>
     </script>
