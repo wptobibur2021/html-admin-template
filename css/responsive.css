@@ -45,6 +45,18 @@
   .user-blance {
     display: none;
   }
+  .dropDownMenu {
+    padding: 15px;
+  }
+  .dropdown-content {
+    min-width: 145px;
+    top: 101%;
+    right: 5px;
+  }
+  a.userLogout {
+    width: auto;
+    margin-top: 5px;
+  }
   .left-sidebar-container {
     display: none;
   }

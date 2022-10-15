@@ -87,11 +87,11 @@
               <h4>$125</h4>
             </div>
             <!-- User profile menu -->
-            <div onclick="dropDownMenuOpen()" class="user-profile-menu dropdown">
-              <div class="user-menu">
-                <img src="./img/user.png" alt="user name" />
-                <h4>Alexa Jui</h4>
-                <i class="fa fa-arrow-down"></i>
+            <div onclick="dropDownMenuOpen()" class="user-profile-menu userProfileMenu dropdown">
+              <div class="user-menu userProfileMenu">
+                <img class="userProfileMenu" src="./img/user.png" alt="user name" />
+                <h4 class="userProfileMenu">Alexa Jui</h4>
+                <i class="fa fa-arrow-down userProfileMenu"></i>
               </div>
             </div>
             <!-- Dropdown menu -->
@@ -101,6 +101,7 @@
                 <a href="#">Add Fund</a>
                 <a href="#">API Documentation</a>
                 <a href="#">Log Out</a>
+                <a href="#" class="userLogout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
               </div>
             </div>
           </div>
@@ -286,7 +287,7 @@
       }
       // Close the dropdown if the user clicks outside of it
       window.onclick = function (event) {
-        if (!event.target.matches(".user-profile-menu")) {
+        if (!event.target.matches(".userProfileMenu")) {
           var dropdowns = document.getElementsByClassName("dropdown-content");
           var i;
           for (i = 0; i < dropdowns.length; i++) {
